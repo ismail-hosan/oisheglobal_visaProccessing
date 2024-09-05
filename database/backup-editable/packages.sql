@@ -1,0 +1,129 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.7
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:3306
+-- Generation Time: Jan 03, 2022 at 06:15 PM
+-- Server version: 10.3.32-MariaDB-cll-lve
+-- PHP Version: 7.3.33
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `iconserv_iwb`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `packages`
+--
+
+CREATE TABLE `packages` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `product_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `service_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `onetime_amount` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `monthly_amount` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` enum('Active','Inactive') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Active' COMMENT 'default status set active , Inactive',
+  `updated_by` int(11) DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `deleted_by` int(11) DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `packages`
+--
+
+INSERT INTO `packages` (`id`, `product_id`, `service_id`, `name`, `onetime_amount`, `monthly_amount`, `description`, `status`, `updated_by`, `created_by`, `deleted_by`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(88, 12, NULL, 'ADVANCED', 'BDT 80000.00 /ONE TIME', 'Monthly Service Fee BDT 1,200', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 02:42:26', '2022-01-03 02:42:26'),
+(111, 11, NULL, 'START-UP WEBSITE', NULL, '৳16000/$199', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 03:46:30', '2022-01-03 03:46:30'),
+(143, 20, NULL, 'PREMIUM', NULL, '৳950/monthly', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 05:40:49', '2022-01-03 05:40:49'),
+(85, 12, NULL, 'PLATINUM', 'BDT 250000.00 /ONE TIME', 'Monthly Service Fee BDT 2,000', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 02:42:26', '2022-01-03 02:42:26'),
+(5, 13, NULL, 'BASIC', 'BDT 30000.00 /ONE TIME', 'Monthly Service Fee BDT 1,000', NULL, 'Active', NULL, NULL, NULL, NULL, '2021-12-30 05:19:34', '2021-12-30 05:19:34'),
+(6, 13, NULL, 'STANDARD', 'BDT 50000.00 /ONE TIME', 'Monthly Service Fee BDT 1,200', NULL, 'Active', NULL, NULL, NULL, NULL, '2021-12-30 05:19:34', '2021-12-30 05:19:34'),
+(7, 13, NULL, 'ADVANCED', 'BDT 80000.00 /ONE TIME', 'Monthly Service Fee BDT 1,500', NULL, 'Active', NULL, NULL, NULL, NULL, '2021-12-30 05:19:34', '2021-12-30 05:19:34'),
+(8, 13, NULL, 'PLATINUM', 'BDT 150000.00 /ONE TIME', 'Monthly Service Fee BDT 2,500', NULL, 'Active', NULL, NULL, NULL, NULL, '2021-12-30 05:19:34', '2021-12-30 05:19:34'),
+(132, 14, NULL, 'BASIC', 'BDT 20000.00 /ONE TIME', NULL, NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 05:16:25', '2022-01-03 05:16:25'),
+(131, 14, NULL, 'ADVANCED', 'BDT 60000.00 /ONE TIME', NULL, NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 05:16:24', '2022-01-03 05:16:24'),
+(134, 15, NULL, 'STANDARD', 'BDT 50000.00 /MONTH', 'Yearly Renew Fee BDT 12,000', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 05:24:14', '2022-01-03 05:24:14'),
+(135, 15, NULL, 'BASIC', 'BDT 25000.00 /MONTH', 'Yearly Renew Fee BDT 8,000', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 05:24:14', '2022-01-03 05:24:14'),
+(133, 15, NULL, 'ADVANCED', 'BDT 150000.00 /MONTH', 'Yearly Renew Fee BDT 18,000', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 05:24:14', '2022-01-03 05:24:14'),
+(15, NULL, 4, 'STARTUP', 'BDT 1550.00 / Yearly', 'USD Price 15$ Yearly', NULL, 'Active', NULL, NULL, NULL, NULL, '2021-12-30 05:19:34', '2021-12-30 05:19:34'),
+(16, NULL, 4, 'PROFESSIONAL', 'BDT 2750.00 / Yearly', 'USD Price 25$ Yearly', NULL, 'Active', NULL, NULL, NULL, NULL, '2021-12-30 05:19:34', '2021-12-30 05:19:34'),
+(17, NULL, 4, 'ADVANCE', 'BDT 4999.00 / Yearly', 'USD Price 52$ Yearly', NULL, 'Active', NULL, NULL, NULL, NULL, '2021-12-30 05:19:34', '2021-12-30 05:19:34'),
+(18, NULL, 4, 'PREMIUM', 'BDT 9999.00 / Yearly', 'USD Price 52$ Yearly', NULL, 'Active', NULL, NULL, NULL, NULL, '2021-12-30 05:19:34', '2021-12-30 05:19:34'),
+(103, 9, NULL, 'ENTERPRISE WEBSITE', NULL, '৳60000/$750', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 03:37:04', '2022-01-03 03:37:04'),
+(102, 9, NULL, 'PROFESSIONAL WEBSITE', NULL, '৳35000/$450', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 03:37:04', '2022-01-03 03:37:04'),
+(101, 9, NULL, 'START-UP WEBSITE', NULL, '৳20000/$250', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 03:37:04', '2022-01-03 03:37:04'),
+(106, 10, NULL, 'BUSINESS PACKAGE', NULL, '৳30000/$355', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 03:41:13', '2022-01-03 03:41:13'),
+(105, 10, NULL, 'MULTI-VENDOR PACKAGE', NULL, '৳100000/$1180', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 03:41:13', '2022-01-03 03:41:13'),
+(87, 12, NULL, 'BASIC', 'BDT 30000.00 /ONE TIME', 'Monthly Service Fee BDT 0', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 02:42:26', '2022-01-03 02:42:26'),
+(110, 11, NULL, 'PROFESSIONAL WEBSITE', NULL, '৳20000/$250', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 03:46:30', '2022-01-03 03:46:30'),
+(109, 11, NULL, 'ENTERPRISE WEBSITE', NULL, '৳60000/$750', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 03:46:30', '2022-01-03 03:46:30'),
+(139, 16, NULL, 'ENTERPRISE WEBSITE', NULL, '৳60000/$750', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 05:27:50', '2022-01-03 05:27:50'),
+(138, 16, NULL, 'PROFESSIONAL WEBSITE', NULL, '৳35000/$450', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 05:27:50', '2022-01-03 05:27:50'),
+(137, 16, NULL, 'START-UP WEBSITE', NULL, '৳20000/$250', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 05:27:50', '2022-01-03 05:27:50'),
+(40, 17, NULL, 'PLAN 1', NULL, 'USD Price 12$ Yearly', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-02 01:07:41', '2022-01-02 01:07:41'),
+(41, 17, NULL, 'PLAN 2', NULL, 'USD Price 12$ Yearly', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-02 01:07:41', '2022-01-02 01:07:41'),
+(42, 17, NULL, 'PLAN 3', NULL, 'USD Price 12$ Yearly', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-02 01:07:41', '2022-01-02 01:07:41'),
+(43, 17, NULL, 'PLAN 4', NULL, 'USD Price 12$ Yearly', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-02 01:07:41', '2022-01-02 01:07:41'),
+(51, 18, NULL, 'ENTERPRISE', NULL, 'USD Price 52$ Yearly', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-02 01:27:04', '2022-01-02 01:27:04'),
+(50, 18, NULL, 'ENTERPRISE', NULL, 'USD Price 52$ Yearly', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-02 01:27:04', '2022-01-02 01:27:04'),
+(49, 18, NULL, 'PREMIUM', NULL, 'USD Price 25$ Yearly', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-02 01:27:04', '2022-01-02 01:27:04'),
+(48, 18, NULL, 'BUSINESS', NULL, 'USD Price 15$ Yearly', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-02 01:27:04', '2022-01-02 01:27:04'),
+(63, 19, NULL, 'ECOMMERCE 4', NULL, '৳4500tk Yearly', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-02 02:16:29', '2022-01-02 02:16:29'),
+(62, 19, NULL, 'ECOMMERCE 3', NULL, '৳950tk', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-02 02:16:29', '2022-01-02 02:16:29'),
+(61, 19, NULL, 'ECOMMERCE 2', NULL, '৳1350 Yearly', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-02 02:16:29', '2022-01-02 02:16:29'),
+(60, 19, NULL, 'ECOMMERCE 1', NULL, '৳950tk Yearly', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-02 02:16:29', '2022-01-02 02:16:29'),
+(86, 12, NULL, 'STANDARD', 'BDT 60000.00 /ONE TIME', 'Monthly Service Fee BDT 1,000', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 02:42:26', '2022-01-03 02:42:26'),
+(142, 20, NULL, 'GOLD', NULL, '৳550/monthly', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 05:40:49', '2022-01-03 05:40:49'),
+(141, 20, NULL, 'START-UP', NULL, '৳350/monthly', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 05:40:49', '2022-01-03 05:40:49'),
+(107, 10, NULL, 'START-UP WEBSITE', NULL, '৳16000/$199', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 03:41:13', '2022-01-03 03:41:13'),
+(104, 9, NULL, 'ENTERPRISE WEBSITE plus', NULL, '৳60000/$750', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 03:37:04', '2022-01-03 03:37:04'),
+(108, 10, NULL, 'MULTI-VENDOR PACKAGE plus', NULL, '৳100000/$1180', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 03:41:13', '2022-01-03 03:41:13'),
+(112, 11, NULL, 'ENTERPRISE WEBSITE plus', NULL, '৳20000/$250', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 03:46:30', '2022-01-03 03:46:30'),
+(130, 14, NULL, 'STANDARD', 'BDT 40000.00 /ONE TIME', NULL, NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 05:16:24', '2022-01-03 05:16:24'),
+(129, 14, NULL, 'ADVANCED plus', 'BDT 60000.00 /ONE TIME', NULL, NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 05:16:24', '2022-01-03 05:16:24'),
+(136, 15, NULL, 'ADVANCED', NULL, NULL, NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 05:24:14', '2022-01-03 05:24:14'),
+(140, 16, NULL, 'ENTERPRISE WEBSITE plus', 'BDT 60000.00 /ONE TIME', NULL, NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 05:27:50', '2022-01-03 05:27:50'),
+(144, 20, NULL, 'PREMIUM', NULL, '৳950/monthly', NULL, 'Active', NULL, 1, NULL, NULL, '2022-01-03 05:40:49', '2022-01-03 05:40:49');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `packages`
+--
+ALTER TABLE `packages`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `packages`
+--
+ALTER TABLE `packages`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=145;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -1,0 +1,36 @@
+[22-Feb-2024 12:04:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/itwaybdc/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/itwaybdc/public_html/config/app.php on line 16
+[22-Feb-2024 12:04:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/itwaybdc/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/itwaybdc/public_html/config/app.php on line 16
+[22-Feb-2024 12:04:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/itwaybdc/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/itwaybdc/public_html/config/app.php on line 16
+[22-Feb-2024 12:04:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/itwaybdc/public_html/config/app.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/itwaybdc/public_html/config/app.php on line 16
+[08-Jun-2024 10:18:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/itwaybds/better.itwaybdsoft.com/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/itwaybds/better.itwaybdsoft.com/config/database.php on line 18
+[25-Jun-2024 16:53:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/nrtoursn/gtech.nrtoursntravels.com/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/nrtoursn/gtech.nrtoursntravels.com/config/database.php on line 18
+[29-Jun-2024 11:37:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/gtechgro/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/gtechgro/public_html/config/database.php on line 18
+[29-Jun-2024 16:20:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/gtechgro/public_html/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/gtechgro/public_html/config/database.php on line 18
+[10-Aug-2024 15:18:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function env() in /home/nrtoursn/oishiglobal.nrtoursntravels.com/config/database.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/nrtoursn/oishiglobal.nrtoursntravels.com/config/database.php on line 18
